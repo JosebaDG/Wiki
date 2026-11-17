@@ -38,12 +38,13 @@ En esta ingesta de prueba se leyeron a fondo el README y los documentos 01, 02, 
 
 ## Contradicción interna
 
-Sobre quién fusiona un PR, la fuente dice dos cosas distintas en el mismo commit:
+Sobre quién fusiona un PR, la fuente dice cosas distintas en el mismo commit:
 
 - [03](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/03-flujo-github.md), paso 7: «La persona pulsa el botón».
+- [06](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md), punto 11: «Los agentes abren PR; tú fusionas».
 - [02](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md), regla 1: un agente revisor fusiona si se cumplen cuatro condiciones; si no, decide la persona.
 
-Lo más probable es que el 03 sea anterior y no se pusiera al día, pero no está comprobado. Se señala aquí y se propone corregirlo en la fuente; el Wiki no la toca.
+Lo más probable es que el 03 sea anterior y no se pusiera al día, pero no está comprobado. El 06 puede estar así a propósito: es un consejo para quien empieza a replicar el método, no la descripción de cómo trabaja hoy este equipo. Se señala aquí; el Wiki no toca la fuente.
 
 ## Afirmaciones vivas
 
