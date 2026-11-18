@@ -3,8 +3,8 @@
 Página de fuente: la carpeta que cuenta cómo una persona y un equipo de agentes de IA hicieron Pvpc-bridge, un proyecto público sobre el precio horario de la luz.
 
 - **Repositorio:** [JosebaDG/Pvpc-bridge](https://github.com/JosebaDG/Pvpc-bridge) (público).
-- **Versión citada:** commit [`3ae0060`](https://github.com/JosebaDG/Pvpc-bridge/tree/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis), el último que cambia la carpeta (18 de octubre de 2026).
-- **Ingerida:** 2026-11-16.
+- **Versión citada:** commit [`3ae0060`](https://github.com/JosebaDG/Pvpc-bridge/tree/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis) para la carpeta, y [`188d29d`](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md) para el 03, el único documento que cambia después (17 de noviembre de 2026).
+- **Ingerida:** 2026-11-16. **Reingesta del 03:** 2026-11-18.
 
 ## Qué es
 
@@ -14,7 +14,7 @@ Nueve documentos en Markdown. El [README](https://github.com/JosebaDG/Pvpc-bridg
 |---|---|
 | [01 · Historia](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/01-historia.md) | De consultar el precio a mano a un repositorio público, en cuatro días. |
 | [02 · Roles y reglas](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md) | Quién decide, quién ejecuta y cómo se pasa la información. |
-| [03 · Flujo en GitHub](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/03-flujo-github.md) | Issue, rama, PR, comprobaciones, revisión y fusión. |
+| [03 · Flujo en GitHub](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md) | Issue, rama, PR, comprobaciones, revisión y fusión. |
 | [04 · Fricciones](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/04-fricciones-y-aprendizajes.md) | Ocho atascos reales, cómo se resolvieron y qué se aprendió. |
 | [05 · Acceso a GitHub](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/05-conectar-github-device-flow.md) | Cómo un agente sube código sin ver una contraseña. |
 | [06 · Cómo replicarlo](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md) | Lecciones para quien quiera trabajar así. |
@@ -30,21 +30,23 @@ En esta ingesta de prueba se leyeron a fondo el README y los documentos 01, 02, 
 - **Comprobado, estimado o supuesto:** cada afirmación técnica dice de dónde sale; lo raro no se borra, se etiqueta y se comprueba ([02](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md), fricciones 2 y 3 en [04](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/04-fricciones-y-aprendizajes.md)). Más en [Comprobado, estimado o supuesto](../conceptos/comprobado-o-supuesto.md).
 - **GitHub como memoria compartida:** los agentes no comparten memoria ni canal; las issues, los PR y un tablón de coordinación sustituyen a pegar mensajes a mano. Los mensajes entre agentes deben entenderse sin contexto ([02](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md), fricción 6 en [04](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/04-fricciones-y-aprendizajes.md)).
 - **Hablar para pensar, escribir para recordar:** lo que se decide de voz se pasa a una issue o a un PR, porque la voz no deja rastro ([02](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md), fricción 7 en [04](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/04-fricciones-y-aprendizajes.md)).
-- **El ciclo de un cambio:** issue → rama → commits pequeños → PR → comprobaciones automáticas → revisión → fusión → limpieza; los agentes no borran nada ([03](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/03-flujo-github.md)).
+- **El ciclo de un cambio:** issue → rama → commits pequeños → PR → comprobaciones automáticas → revisión → fusión → limpieza; los agentes no borran nada ([03](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md)). La fusión sigue la regla 1 del 02 ([03](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md), paso 7).
 - **Lo privado, separado desde el primer día:** un archivo de ejemplo público junto al real, que queda fuera del repositorio ([06](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md), punto 7).
 - **Acceso sin secretos a la vista:** el agente sube código con un acceso de permisos acotados, sin contraseñas ni tokens pegados ([04](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/04-fricciones-y-aprendizajes.md), fricción 4).
 - **Cortesía con quien da los datos:** caché local y peticiones espaciadas a la API pública ([04](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/04-fricciones-y-aprendizajes.md), fricción 8).
 - **Empezar por una molestia real y pequeña, y dictar requisitos, no soluciones** ([06](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md), puntos 1 y 2).
 
-## Contradicción interna
+## Quién fusiona: contradicción resuelta en el 03
 
-Sobre quién fusiona un PR, la fuente dice cosas distintas en el mismo commit:
+En la primera ingesta (commit `3ae0060`) la fuente decía tres cosas distintas sobre quién fusiona un PR:
 
 - [03](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/03-flujo-github.md), paso 7: «La persona pulsa el botón».
 - [06](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md), punto 11: «Los agentes abren PR; tú fusionas».
 - [02](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md), regla 1: un agente revisor fusiona si se cumplen cuatro condiciones; si no, decide la persona.
 
-Lo más probable es que el 03 sea anterior y no se pusiera al día, pero no está comprobado. El 06 puede estar así a propósito: es un consejo para quien empieza a replicar el método, no la descripción de cómo trabaja hoy este equipo. Se señala aquí; el Wiki no toca la fuente.
+En [`188d29d`](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md) el paso 7 del 03 ya remite a la regla 1 del 02, así que 02 y 03 dicen lo mismo. El 06 no cambia: es un consejo para quien empieza a replicar el método, no la descripción de cómo trabaja hoy este equipo. Queda como diferencia de enfoque, no como contradicción.
+
+El paso 6 del 03 («Revisión humana») sigue hablando solo de la persona; no contradice la regla 1, pero no menciona al agente revisor ([03](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md), paso 6).
 
 ## Afirmaciones vivas
 
