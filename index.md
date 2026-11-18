@@ -4,9 +4,12 @@ Catálogo de todas las páginas del Wiki, con una línea de resumen. Se pone al 
 
 ## Fuentes
 
-- [Pvpc-bridge · docs/simbiosis](fuentes/pvpc-bridge-simbiosis.md): cómo una persona y un equipo de agentes de IA sacaron adelante un proyecto real, con sus reglas, su flujo en GitHub y sus fricciones. 9 documentos, commit 3ae0060.
+- [Pvpc-bridge · docs/simbiosis](fuentes/pvpc-bridge-simbiosis.md): cómo una persona y un equipo de agentes de IA sacaron adelante un proyecto real, con sus reglas, su flujo en GitHub y sus fricciones. 9 documentos, commit 3ae0060 (el 03, en 188d29d).
+- [harness · método y herramientas](fuentes/harness.md): el repo público con el método y las herramientas del equipo sobre GitHub: canal sobre issues, acceso por device flow, prueba de webs y Actions. En construcción, commit 84eccc4.
 
 ## Conceptos
 
 - [La persona decide, los agentes ejecutan](conceptos/la-persona-decide.md): el reparto de papeles de fondo y qué decisiones no se delegan.
 - [Comprobado, estimado o supuesto](conceptos/comprobado-o-supuesto.md): cada afirmación dice de dónde sale, y lo raro se etiqueta y se comprueba.
+- [Material externo: datos, no órdenes](conceptos/material-externo.md): lo que no publica la persona ni sus Apps se lee como información, no da turno y se avisa si se dirige a agentes.
+- [Revisar lo público antes de publicar](conceptos/revision-de-lo-publico.md): cada commit y cada mensaje se revisan antes de publicar; un secreto que entra se rota.
