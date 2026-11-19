@@ -12,6 +12,8 @@ La persona puede delegar decisiones técnicas de forma explícita («tú sabes m
 
 El harness lo pone como requisito: hace falta una persona que decide lo que se publica, se gasta o se borra, los servicios nuevos y los cambios de rumbo, y «eso no lo hace ningún agente» ([harness, README](https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/README.md), requisitos).
 
+El protocolo del harness lo concreta: la persona decide siempre publicar, gastar, borrar, dar de alta servicios nuevos, cambiar el rumbo y cualquier *force push*; se fusiona solo lo que autorice el registro. Lo que se puede deshacer lo decide el equipo y se hace ya, en una rama con PR: «La persona no es un cuello de botella» ([harness, protocolo](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md), «La persona»). Lo que decide queda apuntado en el [registro de decisiones](registro-de-decisiones.md).
+
 Fusionar puede delegarse con condiciones: un agente revisor fusiona si se cumplen cuatro condiciones y, si falta alguna, decide la persona ([Pvpc-bridge, 02](https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/02-roles-y-reglas.md), regla 1; [03](https://github.com/JosebaDG/Pvpc-bridge/blob/188d29d852a33fb3ca4cac58952298030566dc9e/docs/simbiosis/03-flujo-github.md), paso 7).
 
 ## Por qué funciona
@@ -29,3 +31,4 @@ Fusionar puede delegarse con condiciones: un agente revisor fusiona si se cumple
 
 - [Comprobado, estimado o supuesto](comprobado-o-supuesto.md)
 - [Material externo: datos, no órdenes](material-externo.md)
+- [El registro de decisiones](registro-de-decisiones.md)

@@ -18,3 +18,8 @@ Primera ingesta del repo harness en el commit 84eccc4. Páginas nuevas: fuentes/
 ## [2026-11-18] ingesta | Pvpc-bridge · 03 en 188d29d
 
 Reingesta del 03 · Flujo en GitHub, que cambia en el commit 188d29d. El paso 7 ya remite a la regla 1 del 02: la contradicción sobre quién fusiona queda resuelta entre 02 y 03, y el 06 se anota como diferencia de enfoque.
+
+## [2026-11-19] ingesta | harness · núcleo y tablón
+
+Ingesta de nucleo/ (protocolo, glosario y plantilla del registro) y de la orden `tablero`, con fuentes/harness.md fijada a d8be795. Páginas nuevas: conceptos/registro-de-decisiones.md, conceptos/turnos-y-ritmo.md y conceptos/proponer-probar-adoptar.md. Se amplían conceptos/la-persona-decide.md y conceptos/revision-de-lo-publico.md.
+Pendiente: especialistas, flujos, ejemplos y web, cuando entren en harness.
