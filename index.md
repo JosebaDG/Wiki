@@ -5,7 +5,7 @@ Catálogo de todas las páginas del Wiki, con una línea de resumen. Se pone al 
 ## Fuentes
 
 - [Pvpc-bridge · docs/simbiosis](fuentes/pvpc-bridge-simbiosis.md): cómo una persona y un equipo de agentes de IA sacaron adelante un proyecto real, con sus reglas, su flujo en GitHub y sus fricciones. 9 documentos, commit 3ae0060 (el 03, en 188d29d).
-- [harness · método y herramientas](fuentes/harness.md): el repo público con el método y las herramientas del equipo sobre GitHub: canal sobre issues, acceso por device flow, prueba de webs y Actions. En construcción; ya tiene el núcleo (protocolo, glosario y plantilla del registro). Commit d8be795.
+- [harness · método y herramientas](fuentes/harness.md): el repo público con el método y las herramientas del equipo sobre GitHub: canal sobre issues, acceso por device flow, prueba de webs y Actions. En construcción; ya tiene el núcleo (protocolo, glosario y plantilla del registro) y los especialistas (20 gorros). Commit e94ebfd.
 
 ## Conceptos
 
@@ -16,3 +16,4 @@ Catálogo de todas las páginas del Wiki, con una línea de resumen. Se pone al 
 - [El registro de decisiones](conceptos/registro-de-decisiones.md): lo decidido vive en `DECISIONES.md` y en las flags, se apunta en el mismo turno y gana a cualquier otra versión.
 - [Turnos y ritmo](conceptos/turnos-y-ritmo.md): en cada hilo habla uno cada vez, con revisiones escalonadas, una sola espera y un fusible contra los bucles.
 - [Proponer, probar, adoptar](conceptos/proponer-probar-adoptar.md): un cambio cada vez, adoptado solo si ayudó, y lecciones con prueba.
+- [Gorros: un rol por ciclo](conceptos/gorros.md): roles con ficha que un agente se pone durante un ciclo, con siete reglas comunes y un orquestador que los reparte.

@@ -23,3 +23,8 @@ Reingesta del 03 · Flujo en GitHub, que cambia en el commit 188d29d. El paso 7 
 
 Ingesta de nucleo/ (protocolo, glosario y plantilla del registro) y de la orden `tablero`, con fuentes/harness.md fijada a d8be795. Páginas nuevas: conceptos/registro-de-decisiones.md, conceptos/turnos-y-ritmo.md y conceptos/proponer-probar-adoptar.md. Se amplían conceptos/la-persona-decide.md y conceptos/revision-de-lo-publico.md.
 Pendiente: especialistas, flujos, ejemplos y web, cuando entren en harness.
+
+## [2026-11-19] ingesta | harness · especialistas
+
+Ingesta de especialistas/ (plantilla, reglas comunes y catálogo de 20 gorros), con fuentes/harness.md fijada a e94ebfd. Página nueva: conceptos/gorros.md.
+Pendiente: flujos, ejemplos y web, cuando entren en harness.
