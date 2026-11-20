@@ -28,3 +28,8 @@ Pendiente: especialistas, flujos, ejemplos y web, cuando entren en harness.
 
 Ingesta de especialistas/ (plantilla, reglas comunes y catálogo de 20 gorros), con fuentes/harness.md fijada a e94ebfd. Página nueva: conceptos/gorros.md.
 Pendiente: flujos, ejemplos y web, cuando entren en harness.
+
+## [2026-11-20] ingesta | harness · flujos, ejemplos y lecciones
+
+Ingesta de flujos/ (esqueleto y adaptador, escaparate web y novela a vídeo) y de ejemplos/ (la primera prueba y 13 lecciones), con fuentes/harness.md fijada a a0e1ac6. Páginas nuevas: conceptos/flujos-esqueleto-y-adaptador.md y conceptos/afirmaciones-vivas.md. Se ponen al día gorros, registro de decisiones, turnos y ritmo, y proponer, probar, adoptar.
+Pendiente: web, y las especialidades y los procedimientos, cuando entren en harness.

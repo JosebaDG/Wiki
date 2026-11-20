@@ -27,6 +27,10 @@ Son marcas sobre issues y PR que se ponen y se quitan en segundos, también desd
 
 `equipo.py apunta` añade las líneas y `equipo.py decisiones` las lee, junto con las flags del canal y de los repos de la configuración ([plantilla](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/plantilla-decisiones.md); [protocolo](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md)). Si el registro cambia, la bandeja lo dice con `REGISTRO CAMBIADO` y se lee antes de nada ([protocolo](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md), «Resiliencia»). El tablón pone el registro el primero en lo que le toca a la persona ([herramientas/README](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/herramientas/README.md)).
 
+## Lo que enseñaron los fallos
+
+Cinco lecciones del harness, en el commit `a0e1ac6`, salen del registro: lo decidido en el chat que no llega al registro lo pisan las rutinas ([001](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/001-decisiones-que-solo-viven-en-el-chat.md)); sin turno en un hilo, el aviso va por el registro ([004](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/004-avisar-sin-turno-va-por-el-registro.md)); el estado de la línea tiene que estar en lo que dijo la persona ([007](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/007-la-conversacion-que-se-apunto-como-decision.md)); la línea separa el objetivo de la herramienta ([008](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/008-la-decision-que-no-llego-a-la-skill.md)); y una reacción no es una decisión: se apunta solo el cierre ([010](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/010-la-reaccion-que-se-apunto-como-decision.md)).
+
 ## Fuentes
 
 - [harness · método y herramientas](../fuentes/harness.md)

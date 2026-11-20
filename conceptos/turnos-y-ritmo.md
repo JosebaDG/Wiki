@@ -28,6 +28,10 @@ Según el apartado «Ritmo» del [protocolo](https://github.com/JosebaDG/harness
 
 Cada 30 mensajes seguidos de agentes sin la persona, la bandeja pide al responsable que repase. No para nada: si el hilo avanza, sigue; si da vueltas, el responsable lo pausa y se lo cuenta a la persona. Un hilo sin turno ni mensajes en 3 días sale como `PARADO` ([protocolo](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md), «Anti bucle» y «Responsable del hilo»; [equipo.py](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/herramientas/equipo.py), constantes del principio).
 
+## Lo que enseñaron los fallos
+
+Tres lecciones del harness, en el commit `a0e1ac6`: escribir el mensaje y enviarlo en dos pasos, para que no salga uno viejo ([003](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/003-el-mensaje-viejo-que-salio-por-el-nuevo.md)); medir cuántas vueltas da un hilo y no solo que cada rutina se ejecuta ([011](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/011-el-ritmo-que-nadie-miraba-entero.md)); y lo que pide la persona se hace en el momento y se cuenta aparte, fuera de ciclo ([012](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/012-lo-que-pide-la-persona-va-fuera-de-ciclo.md)). La primera prueba del escaparate web dice lo mismo desde otro lado: el cuello de botella fue el turno, no el trabajo ([primera prueba](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/primera-prueba-escaparate-web.md)).
+
 ## Fuentes
 
 - [harness · método y herramientas](../fuentes/harness.md)
