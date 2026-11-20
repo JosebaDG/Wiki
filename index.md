@@ -5,7 +5,7 @@ Catálogo de todas las páginas del Wiki, con una línea de resumen. Se pone al 
 ## Fuentes
 
 - [Pvpc-bridge · docs/simbiosis](fuentes/pvpc-bridge-simbiosis.md): cómo una persona y un equipo de agentes de IA sacaron adelante un proyecto real, con sus reglas, su flujo en GitHub y sus fricciones. 9 documentos, commit 3ae0060 (el 03, en 188d29d).
-- [harness · método y herramientas](fuentes/harness.md): el repo público con el método y las herramientas del equipo sobre GitHub: canal sobre issues, acceso por device flow, prueba de webs y Actions. En construcción; ya tiene el núcleo (protocolo, glosario y plantilla del registro), los especialistas (20 gorros), dos flujos y los ejemplos (una prueba real y 13 lecciones). Commit a0e1ac6.
+- [harness · método y herramientas](fuentes/harness.md): el repo público con el método y las herramientas del equipo sobre GitHub: canal sobre issues, acceso por device flow, prueba de webs y Actions. En construcción; ya tiene el núcleo (protocolo, glosario y plantilla del registro), los especialistas (20 gorros), dos flujos y los ejemplos (una prueba real y 13 lecciones). Commit a0e1ac6; los hilos sin turno con fecha, en d634234.
 
 ## Conceptos
 
