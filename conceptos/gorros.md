@@ -29,4 +29,5 @@ Cada ficha dice con qué gorros no se lleva en el mismo ciclo. Por ejemplo, el [
 ## Comprobado y no comprobado
 
 - **Comprobado:** las reglas, el catálogo y las fichas citadas, leídas en el commit `e94ebfd`.
-- **No comprobado:** cuánto ayudan los gorros en la práctica. El harness todavía no trae ejemplos de su uso; llegan con los flujos.
+- **Según la primera prueba:** el harness ya trae un uso real, en el [escaparate web](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/primera-prueba-escaparate-web.md) (commit `a0e1ac6`). La separación no se cumplió: un solo agente llevó redacción, cifras, lector en frío y tono, y tres gorros quedaron provisionales. Para un texto público faltaban gorros (redactor y guardián de la voz), que siguen sin ficha.
+- **No comprobado:** cuánto ayudan los gorros con más pruebas. El reparto por ciclos de [novela a vídeo](https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/novela-a-video.md) está sin probar. Más en [Flujos: esqueleto y adaptador](flujos-esqueleto-y-adaptador.md).
