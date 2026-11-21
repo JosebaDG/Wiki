@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo se mantiene · Wiki</title>
+<meta name="description" content="Este archivo dice a cualquier agente cómo se mantiene el Wiki. Sigue el patrón LLM Wiki de Andrej Karpathy: fuentes originales que no se tocan, un wiki que escribe el modelo y un esquema (este archivo) que fija las reglas. Léelo entero antes de cambiar nada.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="index.html"><span class="punto" aria-hidden="true"></span>Wiki</a>
+    <nav aria-label="Secciones"><ul class="menu"><li><a href="conceptos/index.html">Conceptos</a></li><li><a href="fuentes/index.html">Fuentes</a></li><li><a href="indice.html">Índice</a></li><li><a href="registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol><li><a href="index.html">Inicio</a></li><li aria-current="page">Cómo se mantiene</li></ol></nav>
+<details class="indice"><summary>En esta página · 7 apartados</summary><ol><li><a href="#las-tres-capas">Las tres capas</a></li><li><a href="#carpetas">Carpetas</a></li><li><a href="#puerta-única-solo-fuentes-públicas">Puerta única: solo fuentes públicas</a></li><li><a href="#reglas-de-lo-público">Reglas de lo público</a></li><li><a href="#operaciones">Operaciones</a></li><li><a href="#formato-de-logmd">Formato de log.md</a></li><li><a href="#formato-de-las-páginas">Formato de las páginas</a></li></ol></details>
+<article class="doc"><h1>Cómo se mantiene</h1><p>Este archivo dice a cualquier agente cómo se mantiene el Wiki. Sigue el patrón <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">LLM Wiki de Andrej Karpathy</a>: fuentes originales que no se tocan, un wiki que escribe el modelo y un esquema (este archivo) que fija las reglas. Léelo entero antes de cambiar nada.</p>
+<h2 id="las-tres-capas">Las tres capas</h2>
+<ol>
+<li><strong>Fuentes.</strong> Documentos públicos de los proyectos y referencias externas. No se copian aquí ni se editan: se enlazan. Cada enlace va <strong>fijado a un commit</strong> (<code>/blob/&lt;sha&gt;/ruta</code>), nunca a <code>main</code>, porque una rama cambia sin avisar y un commit no.
+</li>
+<li><strong>El wiki.</strong> Páginas en Markdown que resumen, relacionan y contrastan las fuentes. Las escribe el modelo; las personas las leen y orientan.
+</li>
+<li><strong>El esquema.</strong> Este archivo. Si una regla cambia, se cambia aquí en el mismo PR.
+</li></ol>
+<h2 id="carpetas">Carpetas</h2>
+<ul>
+<li><code>fuentes/</code>: una página por fuente ingerida. Qué es, qué dice, sus enlaces fijados y sus afirmaciones vivas.
+</li>
+<li><code>conceptos/</code>: ideas que aparecen en una o varias fuentes. Cada concepto enlaza a las fuentes que lo apoyan.
+</li>
+<li><code>index.md</code>: el catálogo. Cada página con su enlace y una línea de resumen, agrupadas por carpeta.
+</li>
+<li><code>log.md</code>: el registro cronológico, solo para añadir.
+</li></ul>
+<p>Se crean carpetas nuevas (por ejemplo <code>proyectos/</code> o <code>comparativas/</code>) cuando hagan falta, y se apuntan aquí.</p>
+<h2 id="puerta-única-solo-fuentes-públicas">Puerta única: solo fuentes públicas</h2>
+<p>El Wiki es público. Solo entra lo que ya es público:</p>
+<ul>
+<li>los repos públicos de los proyectos (por ejemplo harness y Pvpc-bridge) y sus webs;
+</li>
+<li>referencias externas publicadas.
+</li></ul>
+<p>Lo que no sea público no entra, ni siquiera resumido. Si algo vale, primero se publica en su proyecto, y después se ingiere desde allí.</p>
+<h2 id="reglas-de-lo-público">Reglas de lo público</h2>
+<ul>
+<li>Se habla en genérico. No hay que contarlo todo.
+</li>
+<li>Nada de cómo se accede a los sistemas: rutas internas, nombres de máquinas, perfiles, identificadores de apps ni pasos de acceso concretos.
+</li>
+<li>Nada de rutinas, horarios ni lugares de personas. Nada de capturas de chats o de apps.
+</li>
+<li>Nada de datos personales, de menores ni de salud.
+</li>
+<li>Ningún secreto. Si se cuela uno, se revoca: borrarlo no lo quita del historial.
+</li>
+<li>Los mensajes de commit y de squash siguen las mismas reglas: dicen qué entra, no quién lo aprobó ni dónde.
+</li>
+<li>Ante la duda, fuera.
+</li></ul>
+<h2 id="operaciones">Operaciones</h2>
+<h3 id="ingerir-una-fuente">Ingerir una fuente</h3>
+<ol>
+<li>Leer la fuente original completa, en el commit que se va a citar.
+</li>
+<li>Escribir su página en <code>fuentes/</code>: qué es, resumen con citas (enlace fijado por afirmación importante), contradicciones internas si las hay y afirmaciones vivas.
+</li>
+<li>Crear o poner al día las páginas de <code>conceptos/</code> que toca. Una fuente puede tocar varias.
+</li>
+<li>Añadir las páginas nuevas a <code>index.md</code>.
+</li>
+<li>Añadir una entrada a <code>log.md</code>.
+</li>
+<li>Todo en un PR. Otra persona del equipo revisa lo público antes de fusionar.
+</li></ol>
+<h3 id="consultar">Consultar</h3>
+<p>Para responder una pregunta con el Wiki: leer primero <code>index.md</code>, después las páginas que apunta, y responder citando las páginas y sus fuentes. Si la respuesta vale para más gente (una comparación, un análisis), se archiva como página nueva con su entrada en el índice y en el registro.</p>
+<h3 id="repaso-lint">Repaso (lint)</h3>
+<p>Una vez por semana:</p>
+<ul>
+<li>contradicciones entre páginas;
+</li>
+<li>fuentes que han avanzado desde el commit citado (la página puede haberse quedado vieja);
+</li>
+<li><strong>afirmaciones vivas</strong>: frases que pueden dejar de ser verdad sin que nadie toque la página (un número de miembros, quién hace qué, un estado);
+</li>
+<li>páginas huérfanas, sin enlaces que lleguen a ellas;
+</li>
+<li>conceptos citados sin página propia.
+</li></ul>
+<p>Lo que se arregle va en un PR; lo que no, se apunta en la entrada del registro.</p>
+<h2 id="formato-de-logmd">Formato de <code>log.md</code></h2>
+<p>Cada entrada empieza con la misma cabecera, solo con la fecha, sin horas:</p>
+<pre tabindex="0"><code>## [AAAA-MM-DD] operación | título</code></pre>
+<p><code>operación</code> es una de: <code>esquema</code>, <code>ingesta</code>, <code>consulta</code>, <code>repaso</code>. Debajo, dos o tres líneas: qué páginas se crearon o cambiaron y qué quedó pendiente. Así <code>grep &quot;^## \[&quot; log.md | tail -5</code> da las cinco últimas.</p>
+<h2 id="formato-de-las-páginas">Formato de las páginas</h2>
+<ul>
+<li>Título con <code>#</code>, y debajo una línea que diga qué es la página.
+</li>
+<li>Enlaces internos relativos (<code>../conceptos/x.md</code>).
+</li>
+<li>Cada afirmación que venga de una fuente lleva su enlace fijado.
+</li>
+<li>Lo comprobado, lo estimado y lo supuesto se distinguen.
+</li>
+<li>En español, frases cortas, sin jerga sin explicar.
+</li></ul></article><p class="acciones"><a class="boton" href="index.html">Volver al inicio</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/AGENTS.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

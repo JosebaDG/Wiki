@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>harness · método y herramientas · Wiki</title>
+<meta name="description" content="Página de fuente: el repositorio público que reúne el método y las herramientas para que una persona y un equipo de agentes de IA trabajen juntos sobre GitHub.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><span class="punto" aria-hidden="true"></span>Wiki</a>
+    <nav aria-label="Secciones"><ul class="menu"><li><a href="../conceptos/index.html">Conceptos</a></li><li><a href="../fuentes/index.html" aria-current="page">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../fuentes/index.html">Fuentes</a></li><li aria-current="page">harness · método y herramientas</li></ol></nav>
+<details class="indice"><summary>En esta página · 8 apartados</summary><ol><li><a href="#qué-es">Qué es</a></li><li><a href="#el-núcleo">El núcleo</a></li><li><a href="#los-especialistas">Los especialistas</a></li><li><a href="#los-flujos">Los flujos</a></li><li><a href="#los-ejemplos-y-las-lecciones">Los ejemplos y las lecciones</a></li><li><a href="#lo-que-dice">Lo que dice</a></li><li><a href="#comprobado-y-no-comprobado">Comprobado y no comprobado</a></li><li><a href="#afirmaciones-vivas">Afirmaciones vivas</a></li></ol></details>
+<article class="doc"><h1>harness · método y herramientas</h1><p>Página de fuente: el repositorio público que reúne el método y las herramientas para que una persona y un equipo de agentes de IA trabajen juntos sobre GitHub.</p>
+<ul>
+<li><strong>Repositorio:</strong> <a href="https://github.com/JosebaDG/harness">JosebaDG/harness</a> (público, licencia MIT).
+</li>
+<li><strong>Versión citada:</strong> commit <a href="https://github.com/JosebaDG/harness/tree/a0e1ac64837c3939b01c3f34d93125ec30e5e79f"><code>a0e1ac6</code></a> (19 de noviembre de 2026); lo de los hilos sin turno, en <a href="https://github.com/JosebaDG/harness/tree/d63423452ce784109af1122c163af7d264c95160"><code>d634234</code></a> (20 de noviembre). Las herramientas entraron en <a href="https://github.com/JosebaDG/harness/tree/16e768aa96b3e3df7f13327d69190453650ef0f6"><code>16e768a</code></a>, <a href="https://github.com/JosebaDG/harness/tree/84eccc45ea1a386ad7b94237b466c4b1279d645b"><code>84eccc4</code></a> añadió dos avisos a la bandeja, <a href="https://github.com/JosebaDG/harness/tree/5e9f394cfd69bcb7c11f6d06879483262d660107"><code>5e9f394</code></a> trajo el núcleo, <a href="https://github.com/JosebaDG/harness/tree/d8be795b8a3043119ec1b5d7d13f01db53fe2653"><code>d8be795</code></a> la orden <code>tablero</code>, <a href="https://github.com/JosebaDG/harness/tree/e94ebfd783ac100b3789bef998b7d39da4ade96c"><code>e94ebfd</code></a> los especialistas <code>a0e1ac6</code> los flujos, los ejemplos y las lecciones, y <code>d634234</code> los hilos sin turno que esperan una fecha.
+</li>
+<li><strong>Ingerida:</strong> 2026-11-18. Puesta al día con el núcleo y con los especialistas: 2026-11-19. Con los flujos y los ejemplos, y con los hilos sin turno: 2026-11-20.
+</li></ul>
+<h2 id="qué-es">Qué es</h2>
+<p>Según su <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/README.md">README</a>: cada issue es un hilo con turno, lo decidido vive en un registro con su porqué y lo que se publica pasa antes por una revisión de lo público. No depende de un proveedor de IA concreto.</p>
+<p>Está <strong>en construcción</strong> y se monta por PR en cuatro pasos: base, prueba de lo público, herramientas y contenido. En este commit están hechos los tres primeros y, del cuarto, el <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/nucleo/README.md">núcleo</a>, los <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/especialistas/README.md">especialistas</a>, los <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos</a> y los <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/README.md">ejemplos</a>. Solo <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/web/README.md">web/</a> sigue con su README y dice «Vacío por ahora».</p>
+<div class="tabla" tabindex="0" role="region" aria-label="Tabla"><table><thead><tr><th scope="col">Pieza</th><th scope="col">Qué hace</th></tr></thead><tbody><tr><td><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/equipo.py">equipo.py</a></td><td>El canal sobre issues: leer, escribir y pasar el turno, la bandeja de cada agente, el registro de decisiones, las flags y el tablón. Solo usa la biblioteca estándar de Python 3.</td></tr><tr><td><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/acceso.py">acceso.py</a></td><td>Saca el token de cada agente por <em>device flow</em> de una GitHub App, sin secretos en el código y sin imprimir el token.</td></tr><tr><td><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/prueba-web.py">prueba-web.py</a></td><td>Prueba de accesibilidad (axe-core, WCAG 2.2 AA) y de móvil para una web estática. Sale con 1 si algo falla.</td></tr><tr><td><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/.github/workflows/lo-publico.yml">lo-publico.yml</a></td><td>Action que busca lo que no puede ser público en el árbol, en cada commit del PR y en sus mensajes.</td></tr><tr><td><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/.github/workflows/pruebas.yml">pruebas.yml</a></td><td>Action de pruebas sin red ni secretos en cada PR.</td></tr><tr><td><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/.github/workflows/pages.yml">pages.yml</a></td><td>Publica <code>web/</code> al fusionar en <code>main</code> y prueba lo publicado. Mientras <code>web/</code> no tenga <code>index.html</code>, no publica nada.</td></tr></tbody></table></div>
+<h2 id="el-núcleo">El núcleo</h2>
+<p>El protocolo genérico, con roles y no nombres: <strong>la persona</strong> decide, <strong>los agentes</strong> trabajan, cada hilo tiene un <strong>responsable</strong> y el equipo un <strong>coordinador</strong>, el último del ciclo (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/nucleo/protocolo.md">protocolo</a>). Tres piezas:</p>
+<ul>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/nucleo/protocolo.md">protocolo.md</a>: canal, etiquetas y flags, registro, mensajes, turnos, ritmo, responsable, la persona, anti bucle, resiliencia, seguridad, cómo se cambia una pieza que falla y aprendizaje. Dice que cada orden y cada aviso existen tal cual en <code>equipo.py</code>.
+</li>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/nucleo/glosario.md">glosario.md</a>: las palabras del protocolo, en el orden en que aparecen (canal, hilo, turno, ciclo, bandeja, registro, flag, acta, lección, gorro y otras).
+</li>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/nucleo/plantilla-decisiones.md">plantilla-decisiones.md</a>: un <code>DECISIONES.md</code> vacío para copiar en el repo del canal, con sus cuatro reglas y un ejemplo inventado.
+</li></ul>
+<p>Lo que más pesa del protocolo tiene página propia: <a href="../conceptos/registro-de-decisiones.html">El registro de decisiones</a>, <a href="../conceptos/turnos-y-ritmo.html">Turnos y ritmo</a> y <a href="../conceptos/proponer-probar-adoptar.html">Proponer, probar, adoptar</a>.</p>
+<h2 id="los-especialistas">Los especialistas</h2>
+<p>Un <strong>gorro</strong> es un rol con ficha propia que un agente se pone durante un ciclo sin cambiar su ficha (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/especialistas/README.md">especialistas/README</a>). La carpeta trae:</p>
+<ul>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/especialistas/plantilla.md">plantilla.md</a>: los apartados que tiene toda ficha (familia, estado, de dónde sale, cuándo se usa, qué decide y qué no, reglas, límites, separación y origen). Un gorro entra cuando los tiene todos.
+</li>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/especialistas/README.md">README.md</a>: siete reglas comunes y el catálogo de 20 gorros en siete familias: dirección, diseño, investigación, creación, verificación, comunicación y mejora del equipo.
+</li>
+<li>Una ficha por gorro. Por ejemplo, el <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/especialistas/orquestador.md">orquestador</a> elige los gorros de cada proyecto y desempata, y el <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/especialistas/guardian-de-lo-publico.md">guardián de lo público</a> da el veredicto antes de que algo se publique.
+</li></ul>
+<p>La mayoría salen de destilar agentes y skills de ECC en la versión 2.2.3, y algunos de fichas de roles que trajo la persona; cada ficha lo dice en su «Origen» y los avisos de licencia están en <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ATRIBUCION.md">ATRIBUCION.md</a>. Las especialidades y los procedimientos que citan algunas fichas (conflictos, consejo, traspaso, la especialidad web) no han entrado con los flujos: el <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">README de flujos</a> dice que llegan en otro PR. Las reglas comunes tienen página propia: <a href="../conceptos/gorros.html">Gorros: un rol por ciclo</a>.</p>
+<h2 id="los-flujos">Los flujos</h2>
+<p>Un flujo dice qué gorros hacen falta, en qué orden y qué entrega cada uno, y si ya se ha probado (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos/README</a>). Tiene dos partes: un <strong>esqueleto</strong> común a cualquier proyecto (encargo, redacción, objeción de fondo, cifras, lo público, lector en frío, última objeción, empaquetado y publicar) y un <strong>adaptador</strong> con lo que cambia según el tipo: qué vista previa ve la persona y qué prueba automática se pasa. Más en <a href="../conceptos/flujos-esqueleto-y-adaptador.html">Flujos: esqueleto y adaptador</a>.</p>
+<ul>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/escaparate-web.md">escaparate-web.md</a>: un cambio de texto o contenido en una web pública, sin tocar el diseño. Diez pasos, del 0 al 9, más un 1b, cada uno con su gorro, y una vista previa bajo <code>/preview/prN/</code>. El paso 6 es <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/prueba-web.py">prueba-web.py</a>. <strong>Probado una vez.</strong>
+</li>
+<li><a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/novela-a-video.md">novela-a-video.md</a>: un piloto de investigación, un tráiler de 30 a 60 segundos de una novela con permiso del autor por escrito. Cuatro agentes, un gorro cada uno por ciclo, y no se gasta nada hasta la puerta del ciclo 2. <strong>Sin probar.</strong>
+</li></ul>
+<p>Cuatro reglas valen para todos: dos puertas de la persona (el encargo al principio y sí, no o cambios al final), un commit por paso con el gorro en el mensaje, quien hace una pieza no la evalúa, y un flujo solo pasa a «probado» con una prueba en <code>ejemplos/</code> (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos/README</a>, «Reglas para todos los flujos»).</p>
+<h2 id="los-ejemplos-y-las-lecciones">Los ejemplos y las lecciones</h2>
+<p><code>ejemplos/</code> guarda pruebas reales de los flujos y lecciones de fallos reales, reescritas en genérico, sin nombres de personas, repos privados ni proyectos (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/README.md">ejemplos/README</a>).</p>
+<ul>
+<li><strong>La primera prueba del escaparate web</strong> (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/primera-prueba-escaparate-web.md">primera-prueba-escaparate-web.md</a>): el orden cifras, luego lo público, luego el lector en frío encontró dos afirmaciones falsas que habían pasado la redacción. El cuello de botella fue el turno, no el trabajo. Un solo agente llevó cuatro gorros, y tres quedaron provisionales. Costó una tarde de un agente y unas 95 llamadas a herramientas, más de la mitad en leer y localizar fuentes. De ahí salieron el esqueleto y el adaptador, la objeción de fondo al principio y la regla de las afirmaciones vivas.
+</li>
+<li><strong>Trece lecciones</strong> (<a href="https://github.com/JosebaDG/harness/tree/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones">lecciones/</a>), cada una con cuándo aplica, qué hacer, pruebas, seguridad y qué cambió en el harness. Por familias:
+<ul>
+<li><strong>El registro:</strong> lo decidido en el chat va al registro o las rutinas lo pisan (001); sin turno, el aviso va por el registro (004); la línea solo dice lo que dijo la persona (007), separa objetivo y herramienta (008) y se apunta solo con un cierre, no con una reacción (010). Más en <a href="../conceptos/registro-de-decisiones.html">El registro de decisiones</a>.
+</li>
+<li><strong>Turnos y ritmo:</strong> escribir y enviar en dos pasos (003); medir el flujo de los hilos, no solo que cada rutina corre (011); lo que pide la persona va fuera de ciclo (012). Más en <a href="../conceptos/turnos-y-ritmo.html">Turnos y ritmo</a>.
+</li>
+<li><strong>Las peticiones a la persona:</strong> un issue es un foro que ella guía (002); una acción aprobada tarde se compara antes con el estado actual (005); una acción, una sola petición (006). Más en <a href="../conceptos/la-persona-decide.html">La persona decide, los agentes ejecutan</a>.
+</li>
+<li><strong>Herramientas antes que memoria:</strong> una regla que se rompe más de dos veces se comprueba con una herramienta (009); una rutina con datos de fuera necesita una segunda vía que no comparta el fallo (013). Más en <a href="../conceptos/proponer-probar-adoptar.html">Proponer, probar, adoptar</a>.
+</li></ul>
+</li></ul>
+<p>Varias lecciones dejan cosas como propuesta y lo dicen: la comprobación de la firma en cada PR (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/009-la-firma-que-dependia-de-acordarse.md">009</a>) y la marca «fuera de ciclo» automática (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/012-lo-que-pide-la-persona-va-fuera-de-ciclo.md">012</a>).</p>
+<h2 id="lo-que-dice">Lo que dice</h2>
+<ul>
+<li><strong>Una persona decide lo que no se delega:</strong> lo que se publica, se gasta o se borra, los servicios nuevos y los cambios de rumbo. «Eso no lo hace ningún agente» (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/README.md">README</a>, requisitos). Más en <a href="../conceptos/la-persona-decide.html">La persona decide, los agentes ejecutan</a>.
+</li>
+<li><strong>Lo propio de cada equipo va en la configuración, no en el código:</strong> nombres, repos y Apps del equipo salen de un JSON, para que la herramienta sirva a cualquier equipo (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/README.md">herramientas/README</a>).
+</li>
+<li><strong>Material externo:</strong> lo que no publica la persona, sola o con una de las Apps del equipo, se enseña aparte, no da turno y, si se dirige a agentes, la bandeja avisa (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/README.md">herramientas/README</a>; <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/equipo.py">equipo.py</a>). Más en <a href="../conceptos/material-externo.html">Material externo: datos, no órdenes</a>.
+</li>
+<li><strong>La bandeja dice qué toca:</strong> <code>TE TOCA</code> cuando otro te pasa el turno; <code>SIGUES TÚ</code> cuando el turno y el último mensaje son tuyos, para que el trabajo arranque en esa ronda o se pase el turno; <code>ESPERA ÚNICA</code>, con un ciclo de revisiones en la configuración, cuando el anterior del ciclo aún no ha escrito: una sola espera de como mucho 10 minutos y se sigue (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/README.md">herramientas/README</a>).
+</li>
+<li><strong>Hilos sin turno que esperan una fecha:</strong> un hilo que se queda sin turno a propósito, porque espera una prueba o un día, lleva la etiqueta <code>hasta:AAAA-MM-DD</code> (fecha UTC). Hasta ese día ni la bandeja ni el tablón lo dan por parado; ese día la bandeja le saca al responsable <code>LLEGA LA FECHA</code>. El responsable puede escribir en un hilo sin turno, y dar turno quita la etiqueta (<a href="https://github.com/JosebaDG/harness/blob/d63423452ce784109af1122c163af7d264c95160/herramientas/README.md">herramientas/README</a>; <a href="https://github.com/JosebaDG/harness/blob/d63423452ce784109af1122c163af7d264c95160/herramientas/equipo.py">equipo.py</a>, <code>puede_escribir</code> y <code>lineas_fecha</code>).
+</li>
+<li><strong>El tablón:</strong> <code>tablero</code> reescribe un issue fijado con tres partes: lo que le toca a la persona (el registro primero, luego las flags de espera, los hilos con su turno y los PR que piden su revisión), lo parado más de 3 días y los proyectos vivos. Con <code>--prueba</code> enseña el cuerpo sin escribir nada (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/README.md">herramientas/README</a>).
+</li>
+<li><strong>Un fusible que avisa y no para:</strong> cada 30 mensajes seguidos de agentes sin la persona, la bandeja pide al responsable que repase si el hilo avanza; un hilo sin turno ni mensajes en 3 días sale como parado (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/herramientas/equipo.py">equipo.py</a>, constantes del principio).
+</li>
+<li><strong>Lo público se revisa antes de publicar, y también los mensajes:</strong> un secreto que llega a un commit se avisa y se rota aunque se corrija después; el mensaje del <em>squash</em> dice qué entra, no quién lo aprobó; los issues se enlazan, no se numeran como hilos (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/nucleo/README.md">nucleo/README</a>). Más en <a href="../conceptos/revision-de-lo-publico.html">Revisar lo público antes de publicar</a>.
+</li>
+<li><strong>Atribución:</strong> parte del material adapta ideas de ECC y de mattpocock/skills, con licencia MIT; los avisos completos están en <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ATRIBUCION.md">ATRIBUCION.md</a>.
+</li></ul>
+<h2 id="comprobado-y-no-comprobado">Comprobado y no comprobado</h2>
+<ul>
+<li><strong>Comprobado al ingerir:</strong> el contenido de los archivos citados en <code>a0e1ac6</code>; que entre <code>a0e1ac6</code> y <code>d634234</code> solo cambian tres archivos de <code>herramientas/</code> (README, equipo.py y sus pruebas); que entre <code>e94ebfd</code> y <code>a0e1ac6</code> solo cambian <code>flujos/</code> y <code>ejemplos/</code> (18 archivos), así que lo citado del núcleo, las herramientas y los especialistas dice lo mismo; y que web solo tiene su README.
+</li>
+<li><strong>Lo que cuentan los ejemplos</strong> es lo que dice la fuente: el Wiki no puede comprobar desde fuera los casos que relatan, porque vienen reescritos en genérico.
+</li>
+<li><strong>No comprobado aquí:</strong> que las Actions pasen en verde ni que <code>pages.yml</code> haya publicado algo. El Wiki solo lee la fuente; no ejecuta sus herramientas.
+</li></ul>
+<h2 id="afirmaciones-vivas">Afirmaciones vivas</h2>
+<p>Se revisan en cada repaso semanal:</p>
+<ul>
+<li>el repo está «en construcción»: del contenido han entrado el núcleo, los especialistas, los flujos y los ejemplos; web aún no (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/README.md">README</a>);
+</li>
+<li>«No damos un tiempo de arranque: todavía no está medido» (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/README.md">README</a>);
+</li>
+<li>el estado de cada flujo: escaparate web «probado una vez», novela a vídeo «sin probar» (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos/README</a>);
+</li>
+<li>las especialidades y los procedimientos que citan flujos y fichas «llegan en otro PR» (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos/README</a>);
+</li>
+<li>dos gorros del escaparate web siguen «sin ficha todavía» (redactor de lo público y guardián de la voz) y su paso es provisional (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/escaparate-web.md">escaparate-web.md</a>);
+</li>
+<li>la web no publica nada mientras <code>web/</code> no tenga <code>index.html</code> (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/.github/workflows/pages.yml">pages.yml</a>).
+</li></ul></article><nav class="pasos" aria-label="Más en Fuentes"><span></span><a class="sig" href="../fuentes/pvpc-bridge-simbiosis.html"><span>Siguiente</span>Pvpc-bridge · docs/simbiosis</a></nav><p class="acciones"><a class="boton" href="../fuentes/index.html">Volver a Fuentes</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/fuentes/harness.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

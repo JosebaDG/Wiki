@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flujos: esqueleto y adaptador · Wiki</title>
+<meta name="description" content="Página de concepto: cómo un equipo de agentes escribe sus formas de trabajar de principio a fin sin empezar de cero en cada tipo de proyecto.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><span class="punto" aria-hidden="true"></span>Wiki</a>
+    <nav aria-label="Secciones"><ul class="menu"><li><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">Flujos: esqueleto y adaptador</li></ol></nav>
+<details class="indice"><summary>En esta página · 7 apartados</summary><ol><li><a href="#qué-es-un-flujo">Qué es un flujo</a></li><li><a href="#las-dos-partes">Las dos partes</a></li><li><a href="#las-reglas-comunes">Las reglas comunes</a></li><li><a href="#el-orden-importa">El orden importa</a></li><li><a href="#comprobado-y-no-comprobado">Comprobado y no comprobado</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><h1>Flujos: esqueleto y adaptador</h1><p>Página de concepto: cómo un equipo de agentes escribe sus formas de trabajar de principio a fin sin empezar de cero en cada tipo de proyecto.</p>
+<h2 id="qué-es-un-flujo">Qué es un flujo</h2>
+<p>Un flujo dice qué gorros hacen falta, en qué orden y qué entrega cada uno, y si ya se ha probado en un trabajo real (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">harness, flujos/README</a>). Los gorros son los de <a href="../conceptos/gorros.html">Gorros: un rol por ciclo</a>.</p>
+<h2 id="las-dos-partes">Las dos partes</h2>
+<ul>
+<li><strong>El esqueleto:</strong> los pasos que valen para cualquier proyecto. El encargo, la redacción o construcción, la objeción de fondo, las cifras, lo público, el lector en frío, la última objeción, el empaquetado para la persona y publicar.
+</li>
+<li><strong>El adaptador:</strong> lo que cambia según el tipo de proyecto. Qué vista previa ve la persona y qué prueba automática se pasa. Una web tiene uno; una app o un vídeo tendrán otro.
+</li></ul>
+<p>Así un flujo nuevo copia el esqueleto y solo escribe su adaptador (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos/README</a>, «Esqueleto y adaptador»). La partición salió de la primera prueba real (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/primera-prueba-escaparate-web.md">primera prueba</a>, «Qué cambió en el harness»).</p>
+<h2 id="las-reglas-comunes">Las reglas comunes</h2>
+<ol>
+<li><strong>Dos puertas de la persona:</strong> el encargo con sus palabras al principio, y sí, no o cambios al final. En medio nada, salvo algo ya publicado que no debe estar: se avisa en el momento, porque despublicar es suyo. Más en <a href="../conceptos/la-persona-decide.html">La persona decide, los agentes ejecutan</a>.
+</li>
+<li><strong>Un commit por paso,</strong> con el gorro en el mensaje: <code>Gorro (quién): qué encontró -&gt; qué cambió</code>. El rastro queda en <code>git log</code>.
+</li>
+<li><strong>Quien hace una pieza no la evalúa.</strong> Si un agente lleva varios gorros, lo dice y esos gorros quedan provisionales hasta que los repase otro.
+</li>
+<li><strong>Un flujo pasa a «probado» solo con una prueba</strong> en <code>ejemplos/</code>: qué pasó, qué funcionó, qué rozó y cuánto costó.
+</li></ol>
+<p>Fuente: <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/README.md">flujos/README</a>, «Reglas para todos los flujos».</p>
+<h2 id="el-orden-importa">El orden importa</h2>
+<p>En el <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/escaparate-web.md">escaparate web</a> la objeción de fondo va pronto, en el paso 1b, porque si llega al final se tira el trabajo de los pasos 2 a 6. Y de 2 a 4 el orden es fijo: primero lo que no es verdad, luego lo que no debe salir y luego lo que no se entiende, porque pulir una frase que después se quita es trabajo tirado. El paso de las cifras marca las <a href="../conceptos/afirmaciones-vivas.html">afirmaciones vivas</a>.</p>
+<h2 id="comprobado-y-no-comprobado">Comprobado y no comprobado</h2>
+<ul>
+<li><strong>Comprobado:</strong> las reglas y los dos flujos, leídos en el commit <code>a0e1ac6</code>.
+</li>
+<li><strong>Según la fuente:</strong> el escaparate web está probado una vez, con un coste de una tarde de un agente y unas 95 llamadas a herramientas; novela a vídeo está sin probar. Todavía no hay adaptador para una app.
+</li></ul>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/gorros.html">Gorros: un rol por ciclo</a>
+</li>
+<li><a href="../conceptos/revision-de-lo-publico.html">Revisar lo público antes de publicar</a>
+</li>
+<li><a href="../conceptos/afirmaciones-vivas.html">Afirmaciones vivas</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><a class="ant" href="../conceptos/comprobado-o-supuesto.html"><span>Anterior</span>Comprobado, estimado o supuesto</a><a class="sig" href="../conceptos/gorros.html"><span>Siguiente</span>Gorros: un rol por ciclo</a></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/flujos-esqueleto-y-adaptador.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

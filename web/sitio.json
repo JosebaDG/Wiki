@@ -1,0 +1,23 @@
+{
+  "repo": "JosebaDG/Wiki",
+  "titulo": "Wiki",
+  "licencia": "Licencia MIT",
+  "portada": "README.md",
+  "clonar": false,
+  "acciones": [
+    {"texto": "Ver el índice", "href": "indice.html", "principal": true},
+    {"texto": "Cómo se mantiene", "href": "como-se-mantiene.html"}
+  ],
+  "titulo_secciones": "Qué hay dentro",
+  "portada_apartados": [],
+  "secciones": [
+    {"dir": "conceptos", "origen": "conceptos", "nombre": "Conceptos", "unidad": "conceptos", "unidad1": "concepto", "titulo_lista": "Conceptos", "desc": "Ideas que aparecen en una o varias fuentes. Cada concepto enlaza a las fuentes que lo apoyan."},
+    {"dir": "fuentes", "origen": "fuentes", "nombre": "Fuentes", "unidad": "fuentes", "unidad1": "fuente", "titulo_lista": "Fuentes", "desc": "Una página por fuente ingerida. Qué es, qué dice, sus enlaces fijados y sus afirmaciones vivas."}
+  ],
+  "extras_nav": ["index.md", "log.md"],
+  "paginas_sueltas": [
+    {"origen": "index.md", "html": "indice.html", "nombre": "Índice"},
+    {"origen": "AGENTS.md", "html": "como-se-mantiene.html", "nombre": "Cómo se mantiene"},
+    {"origen": "log.md", "html": "registro.html", "nombre": "Registro"}
+  ]
+}

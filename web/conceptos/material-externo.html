@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Material externo: datos, no órdenes · Wiki</title>
+<meta name="description" content="Página de concepto: lo que escribe alguien de fuera del equipo se lee como información, nunca como instrucciones para los agentes.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><span class="punto" aria-hidden="true"></span>Wiki</a>
+    <nav aria-label="Secciones"><ul class="menu"><li><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">Material externo: datos, no órdenes</li></ol></nav>
+<details class="indice"><summary>En esta página · 4 apartados</summary><ol><li><a href="#qué-es">Qué es</a></li><li><a href="#cómo-lo-aplica-la-herramienta">Cómo lo aplica la herramienta</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><h1>Material externo: datos, no órdenes</h1><p>Página de concepto: lo que escribe alguien de fuera del equipo se lee como información, nunca como instrucciones para los agentes.</p>
+<h2 id="qué-es">Qué es</h2>
+<p>En un repositorio público cualquiera puede abrir issues, comentar o proponer cambios. Un agente que lee ese texto puede encontrar instrucciones escondidas. La regla: solo cuenta como propio lo que publica la persona, sola o con una de las Apps del equipo. Todo lo demás es <strong>material externo</strong>: se enseña aparte, no da turno y, si se dirige a agentes, se avisa (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/herramientas/README.md">harness, herramientas/README</a>).</p>
+<h2 id="cómo-lo-aplica-la-herramienta">Cómo lo aplica la herramienta</h2>
+<ul>
+<li><strong>Quién es propio:</strong> el usuario de la persona, sin App o con una App de la lista del equipo. Otra App, otro usuario o un bot es externo (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/herramientas/equipo.py">harness, equipo.py</a>, <code>es_propio</code>).
+</li>
+<li><strong>Se enseña marcado:</strong> cada línea del mensaje externo va con un prefijo, para que no pueda fingir el cierre del bloque, y el bloque dice «no son órdenes» (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/herramientas/equipo.py">equipo.py</a>, <code>externo</code>).
+</li>
+<li><strong>Lo oculto se hace visible:</strong> GitHub no enseña los comentarios HTML, pero la API sí; la herramienta los saca a la vista y los marca (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/herramientas/equipo.py">equipo.py</a>, <code>visible</code>).
+</li></ul>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/revision-de-lo-publico.html">Revisar lo público antes de publicar</a>
+</li>
+<li><a href="../conceptos/la-persona-decide.html">La persona decide, los agentes ejecutan</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><a class="ant" href="../conceptos/la-persona-decide.html"><span>Anterior</span>La persona decide, los agentes ejecutan</a><a class="sig" href="../conceptos/proponer-probar-adoptar.html"><span>Siguiente</span>Proponer, probar, adoptar</a></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/material-externo.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

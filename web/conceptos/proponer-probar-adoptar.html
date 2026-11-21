@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proponer, probar, adoptar · Wiki</title>
+<meta name="description" content="Página de concepto: cómo cambia el método cuando algo falla, y cómo se guarda lo aprendido.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><span class="punto" aria-hidden="true"></span>Wiki</a>
+    <nav aria-label="Secciones"><ul class="menu"><li><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">Proponer, probar, adoptar</li></ol></nav>
+<details class="indice"><summary>En esta página · 4 apartados</summary><ol><li><a href="#cuando-falla-una-pieza">Cuando falla una pieza</a></li><li><a href="#lecciones">Lecciones</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><h1>Proponer, probar, adoptar</h1><p>Página de concepto: cómo cambia el método cuando algo falla, y cómo se guarda lo aprendido.</p>
+<h2 id="cuando-falla-una-pieza">Cuando falla una pieza</h2>
+<p>Cuatro pasos del <a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo del harness</a>, apartado «Cuando falla una pieza»:</p>
+<ol>
+<li><strong>Proponer</strong> un cambio pequeño que nombre la pieza (skill, paso, script o regla) y el momento exacto en que falló, con enlace.
+</li>
+<li><strong>Probar</strong> en la siguiente revisión normal, con el mismo caso o uno parecido. Un cambio cada vez.
+</li>
+<li><strong>Decidir con prueba:</strong> ayudó, empeoró, sin efecto o no se sabe. Solo con «ayudó» se adopta.
+</li>
+<li><strong>Apuntar</strong> el veredicto y la prueba en el registro.
+</li></ol>
+<p>Y tres criterios: dejarlo como está también vale, porque cada regla nueva se lee en cada revisión; un fallo repetido es real y uno suelto es ruido, salvo que se vea la causa; y se elige la pieza más barata que lo arregle, «mejor en el script que en otra frase de la skill».</p>
+<h2 id="lecciones">Lecciones</h2>
+<p>Una vez por semana el coordinador abre un hilo de aprendizaje. Cada agente cuenta qué hizo y qué falló y, como mucho, una lección en cuatro partes: cuándo vale, qué hacer, pruebas con enlace y seguridad (alta, media o baja). Sin prueba concreta, «sin lección». Una lección vieja es una hipótesis: si otra la contradice, se miran los dos casos y se queda la que explica los dos (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, «Aprendizaje»).</p>
+<p>Las primeras trece lecciones ya están publicadas en <a href="https://github.com/JosebaDG/harness/tree/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones">ejemplos/lecciones/</a>, reescritas en genérico. Dos enseñan el criterio de «la pieza más barata»: una regla que se rompe más de dos veces se comprueba con una herramienta y no se vuelve a recordar (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/009-la-firma-que-dependia-de-acordarse.md">009</a>), y el arreglo de un fallo de contexto no puede ser más contexto congelado (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/001-decisiones-que-solo-viven-en-el-chat.md">001</a>). Otras dicen que no cambió nada en las herramientas y por qué, como la <a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/004-avisar-sin-turno-va-por-el-registro.md">004</a>.</p>
+<p>Cada hilo se cierra con un acta de seis partes, una de ellas qué parte del harness mejoró, o que no mejoró ninguna (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, «Responsable del hilo»).</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/comprobado-o-supuesto.html">Comprobado, estimado o supuesto</a>
+</li>
+<li><a href="../conceptos/registro-de-decisiones.html">El registro de decisiones</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><a class="ant" href="../conceptos/material-externo.html"><span>Anterior</span>Material externo: datos, no órdenes</a><a class="sig" href="../conceptos/registro-de-decisiones.html"><span>Siguiente</span>El registro de decisiones</a></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/proponer-probar-adoptar.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>
