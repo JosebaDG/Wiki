@@ -5,15 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Página no encontrada · Wiki</title>
 <meta name="description" content="Página no encontrada">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="sitio-wiki">
 <a class="saltar" href="#contenido">Ir al contenido</a>
+<div class="reloj" aria-hidden="true"></div>
 <header class="cabecera">
   <div class="marco cabecera-fila">
-    <a class="marca" href="index.html"><span class="punto" aria-hidden="true"></span>Wiki</a>
-    <nav aria-label="Secciones"><ul class="menu"><li><a href="conceptos/index.html">Conceptos</a></li><li><a href="fuentes/index.html">Fuentes</a></li><li><a href="indice.html">Índice</a></li><li><a href="registro.html">Registro</a></li></ul></nav>
+    <a class="marca" href="index.html"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Wiki</span></a>
+    <nav aria-label="Secciones"><ul class="menu"><li style="--acento:#47d6cf"><a href="conceptos/index.html">Conceptos</a></li><li style="--acento:#a2bcff"><a href="fuentes/index.html">Fuentes</a></li><li><a href="indice.html">Índice</a></li><li><a href="registro.html">Registro</a></li></ul></nav>
   </div>
 </header>
 <main id="contenido" class="marco">
@@ -24,6 +28,7 @@
 <footer class="pie">
   <div class="marco pie-fila">
     
+    <p class="pie-casa"><a href="https://josebadg.github.io/"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Parte de The Singularity</span></a></p>
     <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
   </div>
 </footer>
