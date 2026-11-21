@@ -6,7 +6,8 @@ Las páginas se generan a partir de los `.md` del repo: no se escriben a mano. E
 
 - `sitio.json`: título, secciones y orden.
 - `generar.py`: escribe una página por cada `.md`, la portada y una página por sección. Solo biblioteca estándar de Python 3.
-- `estilo.css`: el estilo, claro u oscuro según el sistema. Sin JavaScript ni fuentes descargadas.
+- `estilo.css`: el estilo, en oscuro. La fuente va incluida en `fuentes/` (sin peticiones externas).
+- `portada.js`: anima la escena de la portada; la página se ve igual sin JavaScript y con «reducir movimiento».
 
 Si cambias un `.md`, rehaz la web en el mismo PR:
 
