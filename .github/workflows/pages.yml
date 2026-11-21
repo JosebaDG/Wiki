@@ -1,6 +1,6 @@
-# Copia de la Action del mismo nombre del harness. Lo propio del Wiki: la
-# prueba de webs (herramientas/prueba-web.py) no vive aquí, se descarga del
-# harness público al probar.
+# Copia adaptada de la Action del mismo nombre del harness. Lo propio del Wiki:
+# la prueba de webs (herramientas/prueba-web.py) se descarga del harness público
+# fijada a un SHA concreto (nunca a main flotante) para garantizar reproducibilidad.
 #
 # Publica web/ en GitHub Pages al fusionar en main y prueba lo publicado.
 #
@@ -9,9 +9,9 @@
 #
 # Mientras web/ no tenga index.html no publica nada: el trabajo sale en verde
 # y lo dice en el resumen. Después de publicar pasa herramientas/prueba-web.py
-# sobre la dirección publicada, en todas las páginas index.html de web/.
-# Si la prueba falla, la web ya está publicada: el rojo avisa para arreglarla
-# en el siguiente PR.
+# sobre la dirección publicada, probando la lista real de páginas generadas
+# por preparar. Si la prueba falla, la web ya está publicada: el rojo avisa
+# para arreglarla en el siguiente PR.
 
 name: Pages
 
@@ -36,8 +36,13 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       hay_web: ${{ steps.mira.outputs.hay_web }}
+      paginas: ${{ steps.mira.outputs.paginas }}
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Rehacer web/ desde los .md
         shell: bash
@@ -50,6 +55,11 @@ jobs:
         run: |
           if [ -f web/index.html ]; then
             echo "hay_web=true" >> "$GITHUB_OUTPUT"
+            {
+              echo "paginas<<EOF_PAGINAS"
+              (cd web && find . -name index.html | sed -e 's|^\.||' -e 's|index\.html$||' | sort)
+              echo "EOF_PAGINAS"
+            } >> "$GITHUB_OUTPUT"
           else
             echo "hay_web=false" >> "$GITHUB_OUTPUT"
             echo "web/ todavía no tiene index.html: no se publica nada." | tee -a "$GITHUB_STEP_SUMMARY"
@@ -80,8 +90,10 @@ jobs:
         uses: actions/deploy-pages@v4
 
   probar:
-    needs: publicar
+    needs: [preparar, publicar]
     runs-on: ubuntu-latest
+    env:
+      HARNESS_SHA: f417364a4a5a3703e3d800001d4af88e38e729e3
     steps:
       - uses: actions/checkout@v4
 
@@ -97,24 +109,26 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          pip install playwright
+          pip install 'playwright>=1.49,<2'
           python -m playwright install --with-deps webkit chromium
           npm i --no-save axe-core@4
 
-      - name: Descargar la prueba de webs del harness
+      - name: Descargar la prueba de webs del harness (SHA fijado)
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p herramientas
-          curl -fsSL https://raw.githubusercontent.com/JosebaDG/harness/main/herramientas/prueba-web.py -o herramientas/prueba-web.py
+          curl -fsSL "https://raw.githubusercontent.com/JosebaDG/harness/${HARNESS_SHA}/herramientas/prueba-web.py" \
+            -o herramientas/prueba-web.py
 
       - name: Probar lo publicado
         shell: bash
         env:
           DIRECCION: ${{ needs.publicar.outputs.page_url }}
+          PAGINAS: ${{ needs.preparar.outputs.paginas }}
         run: |
           set -euo pipefail
-          mapfile -t paginas < <(cd web && find . -name index.html | sed -e 's|^\.||' -e 's|index\.html$||' | sort)
+          mapfile -t paginas < <(printf '%s\n' "$PAGINAS" | grep -v '^$')
           echo "Páginas: ${paginas[*]}"
           python herramientas/prueba-web.py --url "$DIRECCION" --paginas "${paginas[@]}" \
             --axe node_modules/axe-core/axe.min.js --capturas capturas-prueba
