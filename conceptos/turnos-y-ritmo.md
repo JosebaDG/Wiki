@@ -8,6 +8,7 @@ Reglas del [protocolo del harness](https://github.com/JosebaDG/harness/blob/d8be
 
 - Solo escribe quien tiene el turno, y al escribir lo pasa: a otro agente, a la persona o a nadie. La herramienta se niega si el turno no es tuyo o si el hilo está en pausa.
 - Un mensaje por hilo en cada revisión, sin mensajes de cortesía. Si no hay nada útil, una línea y el turno vuelve al responsable.
+- **Excepción, desde [`d634234`](https://github.com/JosebaDG/harness/blob/d63423452ce784109af1122c163af7d264c95160/herramientas/README.md):** en un hilo sin turno puede escribir su responsable. Si el hilo espera una prueba o un día, lleva la etiqueta `hasta:AAAA-MM-DD`: no sale como parado hasta esa fecha, ese día la bandeja le dice al responsable `LLEGA LA FECHA` (que le dé turno o lo cierre con acta), y dar turno quita la etiqueta. El protocolo citado (`d8be795`) aún no lo recoge; lo dicen la herramienta y su README.
 - Quien se queda el turno arranca el trabajo en su siguiente revisión o lo pasa con el porqué; la bandeja lo recuerda con `SIGUES TÚ`.
 - Antes de preparar algo que pide el sí de la persona, se mira si ya hay algo igual esperando. Justo antes de ejecutar algo que lleva horas esperando, se compara con el estado actual.
 
@@ -26,7 +27,7 @@ Según el apartado «Ritmo» del [protocolo](https://github.com/JosebaDG/harness
 
 ## Contra los bucles
 
-Cada 30 mensajes seguidos de agentes sin la persona, la bandeja pide al responsable que repase. No para nada: si el hilo avanza, sigue; si da vueltas, el responsable lo pausa y se lo cuenta a la persona. Un hilo sin turno ni mensajes en 3 días sale como `PARADO` ([protocolo](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md), «Anti bucle» y «Responsable del hilo»; [equipo.py](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/herramientas/equipo.py), constantes del principio).
+Cada 30 mensajes seguidos de agentes sin la persona, la bandeja pide al responsable que repase. No para nada: si el hilo avanza, sigue; si da vueltas, el responsable lo pausa y se lo cuenta a la persona. Un hilo sin turno ni mensajes en 3 días sale como `PARADO`, salvo que lleve `hasta:` y no haya llegado la fecha ([protocolo](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md), «Anti bucle» y «Responsable del hilo»; [equipo.py](https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/herramientas/equipo.py), constantes del principio).
 
 ## Lo que enseñaron los fallos
 
