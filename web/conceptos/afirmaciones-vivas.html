@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afirmaciones vivas · Wiki</title>
+<meta name="description" content="Página de concepto: frases que pueden dejar de ser verdad sin que nadie toque el texto, y qué se hace con ellas.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../marca/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../estilo.css?v=e1fa3ed1">
+</head>
+<body class="sitio-wiki" style="--acento:#47d6cf">
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<div class="reloj" aria-hidden="true"></div>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Wiki</span></a>
+    <nav aria-label="Secciones"><ul class="menu"><li style="--acento:#47d6cf"><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li style="--acento:#a2bcff"><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol class="migas-lista"><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">Afirmaciones vivas</li></ol></nav>
+<details class="indice"><summary>En esta página · 5 apartados</summary><ol><li><a href="#qué-son">Qué son</a></li><li><a href="#qué-se-hace">Qué se hace</a></li><li><a href="#comprobado-y-no-comprobado">Comprobado y no comprobado</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><p class="doc-seccion"><span class="num" aria-hidden="true">01</span><svg class="icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="7" r="2.2"/><circle cx="12" cy="17.5" r="2.2"/><path d="M8 8.2l2.8 7.2M16 8.2l-2.8 7.2M8.2 7h7.6"/></svg><span>Conceptos</span></p><h1>Afirmaciones vivas</h1><p>Página de concepto: frases que pueden dejar de ser verdad sin que nadie toque el texto, y qué se hace con ellas.</p>
+<h2 id="qué-son">Qué son</h2>
+<p>Lo que se dice de algo automático o que cambia solo («cada día», «se actualizan solos», «más de cien», quién hace qué, un estado) puede volverse falso mientras la página sigue igual. El flujo del escaparate web cuenta un caso real: una web decía que sus datos se actualizaban solos cada día cuando la fuente llevaba semanas parada (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/escaparate-web.md">harness, escaparate-web.md</a>, «Reglas del flujo»).</p>
+<h2 id="qué-se-hace">Qué se hace</h2>
+<ul>
+<li><strong>En una web:</strong> el paso de las cifras las marca, y cada una se reescribe con fecha o entra en una comprobación sin agente (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/escaparate-web.md">escaparate-web.md</a>). En la primera prueba, el lector en frío cambió «desde octubre» por una fecha con año (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/primera-prueba-escaparate-web.md">primera prueba</a>).
+</li>
+<li><strong>Los recuentos:</strong> cada cifra que sale se cuenta siempre con la misma consulta, escrita en el flujo del proyecto, y se anota con su fecha, para que dos personas que cuentan lleguen a lo mismo (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/flujos/escaparate-web.md">escaparate-web.md</a>, «Qué se automatiza y qué no»).
+</li>
+<li><strong>En este Wiki:</strong> cada página de fuente lista sus afirmaciones vivas, y el repaso semanal las vuelve a mirar (<a href="../como-se-mantiene.html#repaso-lint">AGENTS.md</a>).
+</li></ul>
+<h2 id="comprobado-y-no-comprobado">Comprobado y no comprobado</h2>
+<ul>
+<li><strong>Comprobado:</strong> la regla y el caso, leídos en el commit <code>a0e1ac6</code>.
+</li>
+<li><strong>No comprobado:</strong> si la comprobación sin agente que propone el flujo existe ya. La fuente la pone como siguiente paso, y darla de alta lo decide la persona.
+</li></ul>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/comprobado-o-supuesto.html">Comprobado, estimado o supuesto</a>
+</li>
+<li><a href="../conceptos/flujos-esqueleto-y-adaptador.html">Flujos: esqueleto y adaptador</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><span></span><a class="sig" href="../conceptos/comprobado-o-supuesto.html"><span>Siguiente</span>Comprobado, estimado o supuesto</a></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/afirmaciones-vivas.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p class="pie-casa"><a href="https://josebadg.github.io/"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Parte de The Singularity</span></a></p>
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

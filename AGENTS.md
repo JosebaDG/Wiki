@@ -14,6 +14,7 @@ Este archivo dice a cualquier agente cómo se mantiene el Wiki. Sigue el patrón
 - `conceptos/`: ideas que aparecen en una o varias fuentes. Cada concepto enlaza a las fuentes que lo apoyan.
 - `index.md`: el catálogo. Cada página con su enlace y una línea de resumen, agrupadas por carpeta.
 - `log.md`: el registro cronológico, solo para añadir.
+- `web/`: la web pública, generada a partir de los `.md` con `web/generar.py`. No se escribe a mano: si cambias un `.md`, rehaz `web/` en el mismo PR.
 
 Se crean carpetas nuevas (por ejemplo `proyectos/` o `comparativas/`) cuando hagan falta, y se apuntan aquí.
 

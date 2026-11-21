@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El registro de decisiones · Wiki</title>
+<meta name="description" content="Página de concepto: lo decidido vive en el repo, en un archivo y en unas marcas sobre los issues, y gana a cualquier otra versión.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../marca/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../estilo.css?v=e1fa3ed1">
+</head>
+<body class="sitio-wiki" style="--acento:#47d6cf">
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<div class="reloj" aria-hidden="true"></div>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Wiki</span></a>
+    <nav aria-label="Secciones"><ul class="menu"><li style="--acento:#47d6cf"><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li style="--acento:#a2bcff"><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol class="migas-lista"><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">El registro de decisiones</li></ol></nav>
+<details class="indice"><summary>En esta página · 7 apartados</summary><ol><li><a href="#qué-es">Qué es</a></li><li><a href="#las-reglas">Las reglas</a></li><li><a href="#las-flags">Las flags</a></li><li><a href="#cómo-lo-apoya-la-herramienta">Cómo lo apoya la herramienta</a></li><li><a href="#lo-que-enseñaron-los-fallos">Lo que enseñaron los fallos</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><p class="doc-seccion"><span class="num" aria-hidden="true">01</span><svg class="icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="7" r="2.2"/><circle cx="12" cy="17.5" r="2.2"/><path d="M8 8.2l2.8 7.2M16 8.2l-2.8 7.2M8.2 7h7.6"/></svg><span>Conceptos</span></p><h1>El registro de decisiones</h1><p>Página de concepto: lo decidido vive en el repo, en un archivo y en unas marcas sobre los issues, y gana a cualquier otra versión.</p>
+<h2 id="qué-es">Qué es</h2>
+<p>«Si no está en el repo, no existe.» Los chats se comprimen y las rutinas arrancan con una foto vieja, así que lo decidido vive en dos sitios y en ninguno más: un <code>DECISIONES.md</code> en el repo del canal, con una línea por decisión, y las flags del issue o del PR (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">harness, protocolo</a>, «El registro»).</p>
+<p>Cada línea lleva fecha, estado, qué, quién, dónde y lo que le queda a la persona (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>). Los estados son cuatro: <code>decidido</code>, <code>aparcado</code>, <code>espera:&lt;persona&gt;</code> y <code>sustituido</code> (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/plantilla-decisiones.md">plantilla del registro</a>).</p>
+<h2 id="las-reglas">Las reglas</h2>
+<p>Todas salen del <a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, apartado «El registro»:</p>
+<ul>
+<li><strong>Mismo turno.</strong> Cuando la persona decide algo, quien lo recibe lo apunta en ese mismo turno, aunque la decisión llegue por un chat.
+</li>
+<li><strong>Antes de pedir o de hacer, se mira.</strong> Lo <code>decidido</code> o <code>aparcado</code> no se pide ni se presenta como pendiente, aunque el issue tenga casillas sin marcar.
+</li>
+<li><strong>Si chocan, gana el registro.</strong> Una skill, un mensaje programado, un documento o la memoria de un agente pierden frente al registro. No se actúa sobre lo viejo: se avisa a la persona del desfase en una línea.
+</li>
+<li><strong>Cambiar es sustituir.</strong> La línea vieja pasa a <code>sustituido</code> y la nueva va arriba. No se borra nada, para que se vea la historia.
+</li>
+<li><strong>Sin listas de decisiones copiadas</strong> dentro de skills o mensajes programados: una copia es otra foto fija.
+</li>
+<li><strong>Sin registro no hay acción.</strong> Si una revisión no puede leer el registro, solo lee.
+</li></ul>
+<h2 id="las-flags">Las flags</h2>
+<p>Son marcas sobre issues y PR que se ponen y se quitan en segundos, también desde el móvil. <code>espera:&lt;persona&gt;</code> es lo único que se le puede pedir a la persona. Al poner <code>decidido</code>, <code>aparcado</code> o <code>sustituido</code>, la herramienta quita la espera, porque «una flag vieja que se queda puesta es justo el fallo que se quiere evitar» (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, «Flags de decisión»).</p>
+<h2 id="cómo-lo-apoya-la-herramienta">Cómo lo apoya la herramienta</h2>
+<p><code>equipo.py apunta</code> añade las líneas y <code>equipo.py decisiones</code> las lee, junto con las flags del canal y de los repos de la configuración (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/plantilla-decisiones.md">plantilla</a>; <a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>). Si el registro cambia, la bandeja lo dice con <code>REGISTRO CAMBIADO</code> y se lee antes de nada (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, «Resiliencia»). El tablón pone el registro el primero en lo que le toca a la persona (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/herramientas/README.md">herramientas/README</a>).</p>
+<h2 id="lo-que-enseñaron-los-fallos">Lo que enseñaron los fallos</h2>
+<p>Cinco lecciones del harness, en el commit <code>a0e1ac6</code>, salen del registro: lo decidido en el chat que no llega al registro lo pisan las rutinas (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/001-decisiones-que-solo-viven-en-el-chat.md">001</a>); sin turno en un hilo, el aviso va por el registro (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/004-avisar-sin-turno-va-por-el-registro.md">004</a>); el estado de la línea tiene que estar en lo que dijo la persona (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/007-la-conversacion-que-se-apunto-como-decision.md">007</a>); la línea separa el objetivo de la herramienta (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/008-la-decision-que-no-llego-a-la-skill.md">008</a>); y una reacción no es una decisión: se apunta solo el cierre (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/010-la-reaccion-que-se-apunto-como-decision.md">010</a>).</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/la-persona-decide.html">La persona decide, los agentes ejecutan</a>
+</li>
+<li><a href="../conceptos/turnos-y-ritmo.html">Turnos y ritmo</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><a class="ant" href="../conceptos/proponer-probar-adoptar.html"><span>Anterior</span>Proponer, probar, adoptar</a><a class="sig" href="../conceptos/revision-de-lo-publico.html"><span>Siguiente</span>Revisar lo público antes de publicar</a></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/registro-de-decisiones.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p class="pie-casa"><a href="https://josebadg.github.io/"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Parte de The Singularity</span></a></p>
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisar lo público antes de publicar · Wiki</title>
+<meta name="description" content="Página de concepto: lo que va a un repositorio público pasa antes por una revisión, de las personas y de una comprobación automática, y esa revisión incluye el historial y los mensajes.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../marca/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../estilo.css?v=e1fa3ed1">
+</head>
+<body class="sitio-wiki" style="--acento:#47d6cf">
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<div class="reloj" aria-hidden="true"></div>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Wiki</span></a>
+    <nav aria-label="Secciones"><ul class="menu"><li style="--acento:#47d6cf"><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li style="--acento:#a2bcff"><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol class="migas-lista"><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">Revisar lo público antes de publicar</li></ol></nav>
+<details class="indice"><summary>En esta página · 5 apartados</summary><ol><li><a href="#qué-es">Qué es</a></li><li><a href="#las-reglas">Las reglas</a></li><li><a href="#la-comprobación-automática">La comprobación automática</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><p class="doc-seccion"><span class="num" aria-hidden="true">01</span><svg class="icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="7" r="2.2"/><circle cx="12" cy="17.5" r="2.2"/><path d="M8 8.2l2.8 7.2M16 8.2l-2.8 7.2M8.2 7h7.6"/></svg><span>Conceptos</span></p><h1>Revisar lo público antes de publicar</h1><p>Página de concepto: lo que va a un repositorio público pasa antes por una revisión, de las personas y de una comprobación automática, y esa revisión incluye el historial y los mensajes.</p>
+<h2 id="qué-es">Qué es</h2>
+<p>Un repositorio público guarda todo lo que entra. Por eso no basta con mirar cómo queda el árbol al final: hay que mirar cada commit y su mensaje (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/nucleo/README.md">harness, nucleo/README</a>).</p>
+<h2 id="las-reglas">Las reglas</h2>
+<ul>
+<li><strong>Un secreto que llega a un commit se avisa y se rota</strong>, aunque se corrija en el commit siguiente. GitHub guarda la cabeza de cada PR aunque se borre la rama, y el <em>squash</em> solo limpia <code>main</code> (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/nucleo/README.md">nucleo/README</a>).
+</li>
+<li><strong>El mensaje del <em>squash</em> dice qué entra, no quién lo aprobó ni dónde.</strong> Se escribe al fusionar y no pasa por la revisión del PR (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/nucleo/README.md">nucleo/README</a>).
+</li>
+<li><strong>Los issues se enlazan, no se numeran como hilos.</strong> Se escribe el enlace al issue y nunca la palabra «hilo» seguida de un número con almohadilla, que es la forma de los hilos del canal privado; la Action la bloquea siempre (<a href="https://github.com/JosebaDG/harness/blob/5e9f394cfd69bcb7c11f6d06879483262d660107/nucleo/README.md">harness, nucleo/README</a>, desde <code>5e9f394</code>).
+</li>
+<li><strong>Lo privado, separado desde el primer día:</strong> un archivo de ejemplo público junto al real, que queda fuera del repositorio (<a href="https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md">Pvpc-bridge, 06</a>, punto 7).
+</li></ul>
+<h2 id="la-comprobación-automática">La comprobación automática</h2>
+<p>La Action de lo público revisa el árbol, las líneas añadidas de cada commit del PR y sus mensajes; en un push a <code>main</code>, los commits que acaban de entrar. Nunca imprime lo que encuentra, solo dónde, por si es un secreto (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/.github/workflows/lo-publico.yml">harness, lo-publico.yml</a>). Se estrenó con cebos inventados, para verla fallar antes de que entrara contenido de verdad (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/README.md">harness, README</a>).</p>
+<p>La revisión del push a <code>main</code> solo descubre un mensaje indebido cuando ya está publicado (<a href="https://github.com/JosebaDG/harness/blob/84eccc45ea1a386ad7b94237b466c4b1279d645b/nucleo/README.md">nucleo/README</a>). Por eso la comprobación no sustituye a la revisión de una persona antes de fusionar.</p>
+<p>Este Wiki usa la misma Action, adaptada, y las mismas reglas (<a href="../como-se-mantiene.html#reglas-de-lo-público">AGENTS.md</a>).</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li>
+<li><a href="../fuentes/pvpc-bridge-simbiosis.html">Pvpc-bridge · docs/simbiosis</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/material-externo.html">Material externo: datos, no órdenes</a>
+</li>
+<li><a href="../conceptos/comprobado-o-supuesto.html">Comprobado, estimado o supuesto</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><a class="ant" href="../conceptos/registro-de-decisiones.html"><span>Anterior</span>El registro de decisiones</a><a class="sig" href="../conceptos/turnos-y-ritmo.html"><span>Siguiente</span>Turnos y ritmo</a></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/revision-de-lo-publico.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p class="pie-casa"><a href="https://josebadg.github.io/"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Parte de The Singularity</span></a></p>
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>

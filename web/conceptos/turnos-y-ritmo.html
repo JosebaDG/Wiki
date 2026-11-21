@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turnos y ritmo · Wiki</title>
+<meta name="description" content="Página de concepto: en cada hilo habla uno cada vez, y cada agente pasa por el canal en una revisión programada, en un orden fijo.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../marca/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../estilo.css?v=e1fa3ed1">
+</head>
+<body class="sitio-wiki" style="--acento:#47d6cf">
+<a class="saltar" href="#contenido">Ir al contenido</a>
+<div class="reloj" aria-hidden="true"></div>
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="../index.html"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Wiki</span></a>
+    <nav aria-label="Secciones"><ul class="menu"><li style="--acento:#47d6cf"><a href="../conceptos/index.html" aria-current="page">Conceptos</a></li><li style="--acento:#a2bcff"><a href="../fuentes/index.html">Fuentes</a></li><li><a href="../indice.html">Índice</a></li><li><a href="../registro.html">Registro</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenido" class="marco">
+<nav class="migas" aria-label="Estás en"><ol class="migas-lista"><li><a href="../index.html">Inicio</a></li><li><a href="../conceptos/index.html">Conceptos</a></li><li aria-current="page">Turnos y ritmo</li></ol></nav>
+<details class="indice"><summary>En esta página · 6 apartados</summary><ol><li><a href="#turnos">Turnos</a></li><li><a href="#ritmo">Ritmo</a></li><li><a href="#contra-los-bucles">Contra los bucles</a></li><li><a href="#lo-que-enseñaron-los-fallos">Lo que enseñaron los fallos</a></li><li><a href="#fuentes">Fuentes</a></li><li><a href="#relacionado">Relacionado</a></li></ol></details>
+<article class="doc"><p class="doc-seccion"><span class="num" aria-hidden="true">01</span><svg class="icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="7" r="2.2"/><circle cx="12" cy="17.5" r="2.2"/><path d="M8 8.2l2.8 7.2M16 8.2l-2.8 7.2M8.2 7h7.6"/></svg><span>Conceptos</span></p><h1>Turnos y ritmo</h1><p>Página de concepto: en cada hilo habla uno cada vez, y cada agente pasa por el canal en una revisión programada, en un orden fijo.</p>
+<h2 id="turnos">Turnos</h2>
+<p>Reglas del <a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo del harness</a>, apartado «Turnos»:</p>
+<ul>
+<li>Solo escribe quien tiene el turno, y al escribir lo pasa: a otro agente, a la persona o a nadie. La herramienta se niega si el turno no es tuyo o si el hilo está en pausa.
+</li>
+<li>Un mensaje por hilo en cada revisión, sin mensajes de cortesía. Si no hay nada útil, una línea y el turno vuelve al responsable.
+</li>
+<li><strong>Excepción, desde <a href="https://github.com/JosebaDG/harness/blob/d63423452ce784109af1122c163af7d264c95160/herramientas/README.md"><code>d634234</code></a>:</strong> en un hilo sin turno puede escribir su responsable. Si el hilo espera una prueba o un día, lleva la etiqueta <code>hasta:AAAA-MM-DD</code>: no sale como parado hasta esa fecha, ese día la bandeja le dice al responsable <code>LLEGA LA FECHA</code> (que le dé turno o lo cierre con acta), y dar turno quita la etiqueta. El protocolo citado (<code>d8be795</code>) aún no lo recoge; lo dicen la herramienta y su README.
+</li>
+<li>Quien se queda el turno arranca el trabajo en su siguiente revisión o lo pasa con el porqué; la bandeja lo recuerda con <code>SIGUES TÚ</code>.
+</li>
+<li>Antes de preparar algo que pide el sí de la persona, se mira si ya hay algo igual esperando. Justo antes de ejecutar algo que lleva horas esperando, se compara con el estado actual.
+</li></ul>
+<p>La persona escribe cuando quiere y su último mensaje manda: <code>turno: &lt;agente&gt;</code> da el turno y <code>ALTO</code> o la etiqueta <code>pausa</code> paran el hilo (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, «La persona»).</p>
+<h2 id="ritmo">Ritmo</h2>
+<p>Según el apartado «Ritmo» del <a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>:</p>
+<ul>
+<li><strong>Revisiones escalonadas en el orden del ciclo,</strong> con unos minutos entre una y otra. El coordinador va el último: cierra, fusiona lo que autoriza el registro y reparte. Las horas van en la configuración, no en el código.
+</li>
+<li><strong>Si da igual a quién, el turno pasa al siguiente del ciclo,</strong> para que la vuelta se complete en el mismo ciclo.
+</li>
+<li><strong>Una sola espera:</strong> si el anterior del ciclo aún trabaja, se espera una vez, como mucho 10 minutos. Nunca bucles.
+</li>
+<li><strong>Salida rápida:</strong> si la bandeja dice «NADA», la revisión termina ahí.
+</li>
+<li><strong>Lo que pide la persona va fuera de ciclo:</strong> el ritmo sirve para pasarse el turno entre agentes, no para frenar a la persona.
+</li>
+<li><strong>Medir antes de ajustar:</strong> el coordinador apunta en cada cierre las vueltas completas y las esperas usadas.
+</li></ul>
+<h2 id="contra-los-bucles">Contra los bucles</h2>
+<p>Cada 30 mensajes seguidos de agentes sin la persona, la bandeja pide al responsable que repase. No para nada: si el hilo avanza, sigue; si da vueltas, el responsable lo pausa y se lo cuenta a la persona. Un hilo sin turno ni mensajes en 3 días sale como <code>PARADO</code>, salvo que lleve <code>hasta:</code> y no haya llegado la fecha (<a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/nucleo/protocolo.md">protocolo</a>, «Anti bucle» y «Responsable del hilo»; <a href="https://github.com/JosebaDG/harness/blob/d8be795b8a3043119ec1b5d7d13f01db53fe2653/herramientas/equipo.py">equipo.py</a>, constantes del principio).</p>
+<h2 id="lo-que-enseñaron-los-fallos">Lo que enseñaron los fallos</h2>
+<p>Tres lecciones del harness, en el commit <code>a0e1ac6</code>: escribir el mensaje y enviarlo en dos pasos, para que no salga uno viejo (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/003-el-mensaje-viejo-que-salio-por-el-nuevo.md">003</a>); medir cuántas vueltas da un hilo y no solo que cada rutina se ejecuta (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/011-el-ritmo-que-nadie-miraba-entero.md">011</a>); y lo que pide la persona se hace en el momento y se cuenta aparte, fuera de ciclo (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/lecciones/012-lo-que-pide-la-persona-va-fuera-de-ciclo.md">012</a>). La primera prueba del escaparate web dice lo mismo desde otro lado: el cuello de botella fue el turno, no el trabajo (<a href="https://github.com/JosebaDG/harness/blob/a0e1ac64837c3939b01c3f34d93125ec30e5e79f/ejemplos/primera-prueba-escaparate-web.md">primera prueba</a>).</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="../fuentes/harness.html">harness · método y herramientas</a>
+</li></ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="../conceptos/registro-de-decisiones.html">El registro de decisiones</a>
+</li>
+<li><a href="../conceptos/la-persona-decide.html">La persona decide, los agentes ejecutan</a>
+</li></ul></article><nav class="pasos" aria-label="Más en Conceptos"><a class="ant" href="../conceptos/revision-de-lo-publico.html"><span>Anterior</span>Revisar lo público antes de publicar</a><span></span></nav><p class="acciones"><a class="boton" href="../conceptos/index.html">Volver a Conceptos</a> <a class="boton secundario" href="https://github.com/JosebaDG/Wiki/blob/main/conceptos/turnos-y-ritmo.md">Ver el archivo en GitHub</a></p>
+</main>
+<footer class="pie">
+  <div class="marco pie-fila">
+    
+    <p class="pie-casa"><a href="https://josebadg.github.io/"><svg class="iso" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="9" y="16" width="5" height="18" rx="1.5" fill="#a2bcff"/><rect x="16" y="11" width="5" height="23" rx="1.5" fill="#47d6cf"/><rect x="23" y="14" width="5" height="20" rx="1.5" fill="#f89dc9" transform="rotate(-12 25.5 34)"/><circle cx="31" cy="9" r="3.2" fill="#fff" class="iso-punto"/></svg><span>Parte de The Singularity</span></a></p>
+    <p>Licencia MIT · <a href="https://github.com/JosebaDG/Wiki">Código y documentos en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>
