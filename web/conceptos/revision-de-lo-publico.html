@@ -34,6 +34,8 @@
 </li>
 <li><strong>Los issues se enlazan, no se numeran como hilos.</strong> Se escribe el enlace al issue y nunca la palabra «hilo» seguida de un número con almohadilla, que es la forma de los hilos del canal privado; la Action la bloquea siempre (<a href="https://github.com/JosebaDG/harness/blob/5e9f394cfd69bcb7c11f6d06879483262d660107/nucleo/README.md">harness, nucleo/README</a>, desde <code>5e9f394</code>).
 </li>
+<li><strong>Cada commit lleva el autor acordado para el repo.</strong> Quien escribe lo fija en git antes del primer commit, y la Action Autoría falla en un PR si algún commit lleva otro correo. El correo va en <code>AUTOR_COMMITS</code>: variable si es público, secreto si es privado, porque el registro de la Action enseña las variables y solo tapa los secretos (<a href="https://github.com/JosebaDG/harness/blob/225637444582707119c201a31f385dd721340654/nucleo/README.md">harness, nucleo/README</a>, desde <code>7acc713</code> y <code>39aeecf</code>).
+</li>
 <li><strong>Lo privado, separado desde el primer día:</strong> un archivo de ejemplo público junto al real, que queda fuera del repositorio (<a href="https://github.com/JosebaDG/Pvpc-bridge/blob/3ae0060b8fdfcd743180e1e59f778f06aa804b6f/docs/simbiosis/06-como-replicarlo.md">Pvpc-bridge, 06</a>, punto 7).
 </li></ul>
 <h2 id="la-comprobación-automática">La comprobación automática</h2>

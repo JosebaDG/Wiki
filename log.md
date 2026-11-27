@@ -38,3 +38,8 @@ Pendiente: web, y las especialidades y los procedimientos, cuando entren en harn
 
 Ingesta de `d634234` (herramientas: el responsable escribe en su hilo sin turno y la etiqueta `hasta:` con el aviso `LLEGA LA FECHA`). Se ponen al día fuentes/harness.md y conceptos/turnos-y-ritmo.md.
 Pendiente: que el protocolo del núcleo lo recoja; web, y las especialidades y los procedimientos, cuando entren en harness.
+
+## [2026-11-27] ingesta | harness · autoría y registro con tope
+
+Ingesta de `7acc713` y `39aeecf` (Action Autoría y `AUTOR_COMMITS` como variable o secreto) y de `a2b7e76`, `ea6d4ab` y `2256374` (leer el registro con tope, el histórico y el «qué» corto). Se ponen al día fuentes/harness.md (con la errata de su línea 6), conceptos/registro-de-decisiones.md, conceptos/revision-de-lo-publico.md e index.md, donde el harness deja de salir «en construcción».
+Pendiente: las especialidades y los procedimientos, cuando entren en harness.
